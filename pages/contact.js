@@ -86,48 +86,53 @@ const Contact = () => {
       </Head>
       <div className='container'>
         <Header />
-        <main className='content contact-container'>
-          <h1 className='title'>Contact us</h1>
-          <h2 className='title'>Call: <a href="tel:240-665-7890">(240) 665-3350</a></h2>
-          <h2 className='title'>Email: monica@theflowermoments.com</h2>
-          <h2 className='center title'>Send Monica a message</h2>
-          <form onSubmit={handleOnSubmit}>
-            <input 
-              id='name'
-              value={inputs.name}
-              onChange={handleOnChange}
-              required
-              type='text' 
-              placeholder='Name' 
-            />
-            <input 
-              id='email'
-              value={inputs.email}
-              onChange={handleOnChange}
-              required
-              type='email' 
-              placeholder='Email' 
-            />
-            <textarea 
-              id='message'
-              value={inputs.message}
-              onChange={handleOnChange}
-              placeholder='Message'
-              required
-              >
-            </textarea>
-            <button>
-              <Link href='/'>
-                <a>Send to Monica</a>
-              </Link>
-            </button>
-          </form>
-          {status.info.error && (
-            <div>Error: {status.info.msg}</div>
-          )}
-          {!status.info.error && status.info.msg && (
-            <div className="success">{status.info.msg}</div>
-          )}
+        <main className='content'>
+          <div className='contact-container'>
+            <h1 className='title'>Contact us</h1>
+            <h3 className='title'>Call: <a href="tel:240-665-7890">(240) 665-3350</a></h3>
+            <h3 className='title'>Email: monica@monicabrowneflowers.com</h3>
+          
+            <h2 className='center title'>Send us a message</h2>
+            <form onSubmit={handleOnSubmit}>
+              <input 
+                id='name'
+                value={inputs.name}
+                onChange={handleOnChange}
+                required
+                type='text' 
+                placeholder='Name' 
+              />
+              <input 
+                id='email'
+                value={inputs.email}
+                onChange={handleOnChange}
+                required
+                type='email' 
+                placeholder='Email' 
+              />
+              <textarea 
+                id='message'
+                value={inputs.message}
+                onChange={handleOnChange}
+                placeholder='Message'
+                required
+                >
+              </textarea>
+              <button type="submit" disabled={status.submitting}>
+                {!status.submitting
+                  ? !status.submitted
+                    ? 'Submit'
+                    : 'Submitted'
+                  : 'Submitting...'}
+              </button>
+            </form>
+            {status.info.error && (
+              <div>Error: {status.info.msg}</div>
+            )}
+            {!status.info.error && status.info.msg && (
+              <div className="success">{status.info.msg}</div>
+            )}
+          </div>
         </main>
       </div>
       

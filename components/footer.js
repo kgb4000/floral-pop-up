@@ -26,7 +26,7 @@ const Footer = () => {
         <Link href='/'>
           <a>The Flower Moments</a>
         </Link>
-        <p className='center'>We Deliver!</p>
+        <p className='center'>We Deliver on Mother's Day!</p>
         <a href="tel:240-665-7890">(240) 665-3350</a>
         <p>All Rights Reserved &copy; {new Date().getFullYear()}</p>
         <a href="https://www.instagram.com/monicabrowneflowers/">

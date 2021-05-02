@@ -24,7 +24,7 @@ header {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 960px;
   padding: 0 1.2em;
   margin: 0 auto;
   display: flex;
@@ -113,11 +113,12 @@ button.buy-button {
 button:hover {
   background-color: #55efc4;
   border-color: #55efc4;
+  cursor: pointer;
 }
 
 form {
   max-width: 600px;
-  margin: 2em auto;
+  margin: 0 auto;
 }
 
 input,
@@ -134,9 +135,10 @@ textarea {
 }
 
 .testimonials {
-  max-width: 30em;
-  margin: 0 auto;
+  padding:  1rem 3rem;
 }
+
+
 
 footer {
   text-align: center;

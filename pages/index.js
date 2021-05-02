@@ -12,12 +12,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css" />
       </Head>
+      
       <div className='container'>
         <Header />
         <main className='content'>
-          <h1 className='title'>The Flower Moments</h1>
-          <h2 className='center title'>Mother's Day Virtual Pop-up</h2>
-          <h2 className='center title'>Orders Delivered on Mother's Day</h2>
+          <h1 className='title'>Mother's Day Flowers</h1>
+          <h2 className='center title'>Pre-order  Today!</h2>
+          <h3 className='center title'> We Deliver on Mother's Day!</h3>
           <div className='products'>
             <ul className='products'>
             {products.map(({ id, title, image, description, price, url }) => (
@@ -35,7 +36,10 @@ export default function Home() {
                     data-item-url={url}
                     data-item-image={image}
                     data-item-description={description}
-                    data-item-custom1-name="Note for mom">
+                    data-item-max-quantity={4}
+                    data-item-min-quantity={1}
+                    data-item-custom1-name="Note for mom"
+                  >
                     Add to cart
                   </button>
                 </div>

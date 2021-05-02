@@ -14,9 +14,11 @@ const About = () => {
       <div className='container'>
         <Header />
         <main className='content about-container'>
-          <h1 className='title'>The Flower Moments</h1>
+          <h1 className='title'>About The Flower Moments</h1>
           <img src='../images/monica-pic.jpeg' alt='Monica Browne' />
-          <p>Monica Browne Flowers provides a personalized floral experience for customer's in the greater Bowie, Upper Marlboro, and Crofton areas. We look forward to providing exceptional services to all new and repeat customer's. Looking to wow that special someone with an arrangement for a birthday, anniversary, sympathy, retirement or just because. Monica Browne Floral Designs is your reliable source for hand delivered flower arrangements.</p>
+          <p>The Flower Moments is an independent flower shop designing  and providing beautiful flowers for all occasions. It is owned and operated by Monica Browne, a professional florist in Bowie Maryland, who has a wealth of knowledge and experience when it comes to designing floral arrangements. You can contact us <Link href="/contact">
+            <a>here</a>
+          </Link>.</p>
           <h2 className='center'>Testimonials</h2>
             <div className='testimonials'>
             <p>The flower arrangements are amazing. My daughter absolutely loves them. Thank you so much.</p>
@@ -25,11 +27,13 @@ const About = () => {
             <p className='center'>Johnnerlyn J.</p>
           </div>
           <div className='center'>
-            <button>
-              <Link href='/'>
-                <a>&larr; Shop for flowers</a>
-              </Link>
-            </button>
+            <Link href='/'>
+              <a>
+                <button>
+                  &larr; Shop for flowers
+                </button>
+              </a>
+            </Link>
           </div>
         </main>
       </div>
